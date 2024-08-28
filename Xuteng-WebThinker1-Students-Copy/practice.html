@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="/script/practice.css" rel="stylesheet" />
+    <link href="/script/bootstrap.css" rel="stylesheet" />
+    <style>
+        /* this selector defines that 
+      all the <h1> tags are green */
+        h1 {
+            color: green;
+        }
+
+        /* individual html tags can have 
+      separate ids which must be unique */
+        #a {
+            color: red;
+        }
+
+        /* individual html tags can have 
+      separate ids which must be unique */
+        #b {
+            color: blue;
+        }
+
+        /* you can also define generic classes, 
+      and multiple classes can be defined. 
+         This is the most common way of defining styles */
+        .blue {
+            color: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-dark navbar-expand-lg bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo-bbcc.png" alt="logo" class="d-inline-block" style="max-height:3rem"
+                        loading="lazy">
+                    <span class="d-none d-sm-inline-block align-middle">Byte Buster<small
+                            class="d-block lh-xs fs-7">Coding Club</small></span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navlinks"><span
+                        class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navlinks">
+                    <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link active" href="practice.html">Practice</a></li>
+                        <li class="nav-item"><a class="nav-link" href="aboutus.html">Abouts Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                        <li class="nav-item"><a class="nav-link" href="projects.html">Past Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="contacts.html">Contacts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="memberspotlight.html">memberspotlight</a></li>
+                        <li class="nav-item"><a class="nav-link" href="tutorial.html">tutorial</a></li>
+                        <!-- add list item for events.html -->
+                        <!-- add list item for projects.html -->
+                        <!-- add list item for contacts.html -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- <!-- <h1>This is heading h1 size</h1>
+    <h2 id="a">This is heading h2 size</h2>
+    <h3 id="b">This is heading h3 size</h3>
+    <h4>This is heading h4 size</h4>
+    <h5>This is heading h5 size</h5>
+    <h6>This is heading h6 size</h6> -->
+    <!-- <h1>this it heading 1 </h1>
+    <h2 class='text-center'>this it heading 2 </h2>
+    <h3>this it heading 3 </h3>
+    <h4>this it heading 4 </h4>
+    <h5>this it heading 5 </h5>
+    <h6>this it heading 6 </h6>
+    <p>this is paragraph</p>
+    <div>
+      <h1>Some Important Header</h1>
+      <p class="someclass">
+        This is a paragraph description. -->
+    <!-- </p> -->
+    <!-- <p class="text-left ">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tincidunt augue nunc, eu pretium orci tincidunt vitae. In quis mollis risus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam ut nibh eget quam lacinia interdum id eu magna. Etiam nunc arcu, imperdiet pretium congue vitae, porttitor aliquam dui. Nullam aliquam ultricies venenatis. Proin et mauris eu libero fringilla tempor nec efficitur nulla.
+      </p>
+      <p class="text-right">
+          Etiam cursus scelerisque est eget interdum. Praesent fermentum sem libero, in venenatis orci interdum eu. Suspendisse nec ligula non est condimentum ultricies. Phasellus mattis leo et tempus venenatis. Ut fringilla tortor sed massa rutrum tincidunt. Phasellus gravida tristique urna vel vulputate. Nulla augue massa, viverra eget mattis nec, blandit nec nisi. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
+      <p class="text-center">
+          Aliquam hendrerit efficitur ante a mollis. Maecenas faucibus imperdiet ante molestie vehicula. Nulla massa velit, feugiat non enim tincidunt, sodales iaculis metus. Cras eu purus ultricies, molestie nibh eu, ornare urna. Curabitur suscipit tincidunt lobortis. Vestibulum vitae ipsum orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+      <p class="text-justify">
+          Etiam non lacinia dolor. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ex ut dolor faucibus dictum eu eget sem. Vestibulum ipsum elit, varius non augue nec, aliquam mattis dolor. Fusce vitae dui leo. Nam ligula sem, venenatis sit amet metus sed, scelerisque auctor lacus. Sed facilisis sed eros nec congue. Nam nec tellus ultricies, sodales lacus dapibus, faucibus ex. Quisque ornare erat metus, sed consequat erat convallis quis. Donec interdum, ex at pharetra auctor, lectus ex fermentum lectus, in rhoncus massa erat id sem. Fusce pellentesque nulla a ligula cursus vehicula. Maecenas id nisl risus.
+      </p>
+      <p class="text-both">
+          Fusce ante nisl, consequat euismod ultricies a, dignissim non dui. Ut ac eleifend magna. Curabitur eget tortor augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Suspendisse at venenatis urna. Nunc vitae tempor nisi, ut gravida ligula. Nunc maximus faucibus gravida. Donec tellus nunc, malesuada eget libero non, suscipit porta massa. Praesent in est commodo, porttitor nibh et, blandit massa. Morbi pulvinar, purus ut convallis lacinia, eros enim sagittis dui, at luctus massa augue nec odio. Quisque vitae venenatis orci. Maecenas sed nibh non leo auctor accumsan eu in dui. Nunc malesuada purus sit amet vehicula mollis. Donec rutrum quam massa, sed eleifend odio pulvinar nec.
+      </p>
+    </div> -->
+    <div class="border border-dark m-5">
+        <div class="pb-3 pt-3"> 11111111111111111111 </div>
+        <div class="pb-3"> 22222222222222222222222 </div>
+        <div class="pb-3"> 333333333333333333333333 </div>
+    </div>
+    <div class="row ">
+        <div class="col-6 border border-dark "> 123 </div>
+        <div class="col-3 border border-dark "> 456 </div>
+        <div class="col-2 border border-dark "> 789 </div>
+        <div class="col-1 border border-dark "> 101112 </div>
+    </div>
+
+
+</body>
+
+</html>
