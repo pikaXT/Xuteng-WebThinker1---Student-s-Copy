@@ -6,7 +6,6 @@
 	<title>Byte Buster Coding Club</title>
 	<script src="script/jquery.min.js"></script>
 	<script src="script/bootstrap.js"></script>
-	<script src="script/contacts.js"></script>
 	<link href="script/bootstrap.css" rel="stylesheet" />
 	<link href="script/contacts.css" rel="stylesheet" />
 	<link href="img/favicon-bbcc.png" rel="icon" />
@@ -49,25 +48,70 @@
 				<p>Hey there, fellow coder! Got a question? An idea? Just want to say 'Hi'? Drop us a line below. We'll get back to you quicker than a JavaScript loop!</p>
 			</div>
 		</div>
-		<!-- Key section -->
+
 		<form class="container py-3">
 			<div class="row gy-3">
-				<!-- Label: Name*
-						 Text Input field -->
+				<label for="name">name*</label>
+				<input type=”text” id="name" name=”name” placeholder="name" class="form-control">
+				<p class="d-none text-danger" id="error1">please enter a name</p>
 
-				<!-- Label: Email Address*
-						 Email Input field -->
+				<label for="email">email*</label>
+				<input type=”email” id="email" name=”email” placeholder="email" class="form-control">
+				<p class="d-none text-danger" id="error2">please enter a email</p>
+
+				<label for="subject">subject*</label>
+				<input type=”text” id="subject" name=”email” placeholder="Enquiry on how to code" class="form-control">
+				<p class="d-none text-danger" id="error3">please enter a name</p>
+
+				<label for="subject2">subject*</label>
+				<textarea type=”text” id="subject2" name=”email” class="form-control" rows=6></textarea>
+				<p class="d-none text-danger" id="error4">please enter a massage</p>
 
 				<!-- Label: Subject*
-						 Text Input field with placeholder text "Enquiry on how to code"-->
+						Textarea field with the row attribute of value 5-->
 
-				<!-- Label: Subject*
-						 Textarea field with the row attribute of value 5-->
 			</div>
-			<!-- Code a blue "Send" button inside a <div> according to the criteria stated -->
+
 		</form>
+		<button class="btn btn-primary ml-5" onclick="validate()">Send</button>
+
 	</article>
+
+	
 	<!-- End of coding region -->
 	<footer class="bg-dark text-light"><div class="container py-2 pb-4">Done by Computhink Kids SG.</div></footer>
+	<script>	
+		const validate = () => {
+			let input1 = document.getElementById("name").value.length;
+			if (input1 == 0 ){
+				document.getElementById("name").classList = "form-control is-invalid";
+				document.getElementById("error1").classList = "text-danger ";
+
+			}else{
+					document.getElementById("name").classList = "form-control";
+					document.getElementById("error1").classList = "text-danger d-none";
+			}
+			let input2 = document.getElementById("email").value.length;
+			if (input2 == 0 ){
+				document.getElementById("email").classList = "form-control is-invalid";
+				document.getElementById("error2").classList = "text-danger ";
+
+			}else{
+					document.getElementById("email").classList = "form-control";
+					document.getElementById("error2").classList = "text-danger d-none";
+			}
+			let input3 = document.getElementById("subject").value.length;
+			if (input3 == 0 ){
+				document.getElementById("subject").classList = "form-control is-invalid";
+				document.getElementById("error3").classList = "text-danger ";
+
+			}else{
+					document.getElementById("subject").classList = "form-control";
+					document.getElementById("error3").classList = "text-danger d-none";
+			}
+			
+		}	
+			
+	</script>
 </body>
 </html>
