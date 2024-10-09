@@ -61,7 +61,7 @@
 
 				<label for="subject">subject*</label>
 				<input type=”text” id="subject" name=”email” placeholder="Enquiry on how to code" class="form-control">
-				<p class="d-none text-danger" id="error3">please enter a name</p>
+				<p class="d-none text-danger" id="error3">please enter something</p>
 
 				<label for="subject2">subject*</label>
 				<textarea type=”text” id="subject2" name=”email” class="form-control" rows=6></textarea>
@@ -72,8 +72,10 @@
 
 			</div>
 
+			<button type="button" class="btn btn-primary mt-2" onclick="validate()">Send</button>
 		</form>
-		<button class="btn btn-primary ml-5" onclick="validate()">Send</button>
+
+
 
 	</article>
 
@@ -109,6 +111,19 @@
 					document.getElementById("subject").classList = "form-control";
 					document.getElementById("error3").classList = "text-danger d-none";
 			}
+			let input4 = document.getElementById("subject2").value.length;
+			if (input4 <= 50 ){
+				document.getElementById("subject2").classList = "form-control is-invalid";
+				document.getElementById("error4").classList = "text-danger ";
+
+			}else{
+					document.getElementById("subject2").classList = "form-control";
+					document.getElementById("error4").classList = "text-danger d-none";
+			}
+			if (document.querySelectorAll('.is-invalid').length === 0){
+			 window.location.reload();
+			}
+		
 			
 		}	
 			
